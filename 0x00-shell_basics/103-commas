@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap | tr '\n' ',' | sed 's/,$/\n/'
+printf "%s" ./* ./*/* | sort -fd | awk '{printf "%s, ", $0}' && echo .
