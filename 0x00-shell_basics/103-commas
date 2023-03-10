@@ -1,2 +1,2 @@
 #!/bin/bash
-shopt -s extglob;printf "%s, " . .. 103-commas !(.|..|103-commas) $(printf '%s\n' !(.|..|103-commas) | sort -fd | tr '\n' ',') && echo .
+ls -ap | tr '\n' ',' | sed 's/,$/\n/'
