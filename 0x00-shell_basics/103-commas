@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s" ./* ./*/* | sort -fd | awk '{printf "%s, ", $0}' && echo .
+shopt -s extglob;printf "%s, " . .. 103-commas !(.|..|103-commas) $(printf '%s\n' !(.|..|103-commas) | sort -fd | tr '\n' ',') && echo .
