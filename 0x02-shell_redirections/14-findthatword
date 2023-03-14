@@ -1,0 +1,2 @@
+#!/bim/bash
+grep "root" /etc/passwd
